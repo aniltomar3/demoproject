@@ -1,0 +1,14 @@
+[
+   {
+      "name" : "Demo name11",
+      "address" : "Demo address11",
+      "stu_email" : "demo1@gmail1.com",
+      "city" : "Delhi11"
+   },
+   {
+      "name" : "Demo name12",
+      "address" : "Demo address12",
+      "stu_email" : "demo1@gmail2.com",
+      "city" : "Delhi12"
+   }
+]

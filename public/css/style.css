@@ -1,0 +1,38 @@
+*{ padding:0; margin:0; box-sizing:border-box; }
+header {
+    background-color: pink;
+    padding: 20px;
+}
+
+nav{
+    background-color: #b8e5b8;
+    padding: 10px;
+}
+
+nav a{
+margin-right:15px;
+} 
+
+article {
+    float: left;
+    width: 80%;
+}
+
+aside {
+    float: right;
+    width: 20%;
+   background-color: #f9f9bc;
+   min-height:803px;
+}
+
+aside>ul {
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+aside>ul li{ padding:5px; }
+
+footer {
+    background-color: pink;
+    text-align: center;
+}

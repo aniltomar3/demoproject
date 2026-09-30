@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Student extends Model
+{
+   public $timestamps = false;
+    use HasFactory;
+   protected $guarded= []; 
+
+   public function contact(){
+      return $this->hasOne(Contact::class);
+   }
+
+   public function library(){
+      return $this->hasMany(Library::class);
+   }
+}
