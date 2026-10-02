@@ -6,6 +6,8 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 use App\Models\User;
+use App\Models\Post;
+use App\Observers\PostObserver;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,5 +28,7 @@ class AppServiceProvider extends ServiceProvider
        Gate::define('isAdmin',function(User $user){
          return $user->email==='demo@gmail.com';
        });
+
+       Post::Observe(PostObserver::class);   // to run PostObserver
     }
 }

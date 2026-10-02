@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserController;  
+use App\Http\Controllers\Postcontroller;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LibraryController;
 use App\Http\Middleware\ValidUser;
@@ -69,8 +70,7 @@ Route::get('/addstudent',function(){
 
 Route::post('adduser',[StudentController::class,'adduserform'])->name('adduser');
 
-// Resource controller
-Route::resource('student',Usercontroller::class);
+
 
 // Upload file
 Route::get('imgform',[PageController::class,'imgform'])->name('imgform');
@@ -124,3 +124,9 @@ Route::get('/job',function(){
   EmailSendingJob::dispatch($data,'testing','Demo testing mail sent!');  //->onQueue('emailing');
   return "Email job has been added to queue!";
 });
+
+// Resource controller
+Route::resource('student',Studentcontroller::class);
+Route::resource('user',Usercontroller::class);
+Route::resource('post',Postcontroller::class);
+Route::get('/post/singlepost/{id}',[Postcontroller::class,'singlePost']);
